@@ -1,0 +1,13 @@
+<form_for action="/sessions/create" method="post">
+
+  <select name="user_name">
+    <% User.all.each do |user| %>
+      <option value="<%=user.id%>"><%= user.name %></option>
+    <% end %>
+  </select>
+      <input type="password" name="password">
+
+      <input type="submit" value="Sign In">
+
+
+</form>
